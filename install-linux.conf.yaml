@@ -5,8 +5,6 @@
     ~/.zshrc: zshrc
     ~/.zsh: zsh/
     ~/.tmux.conf: tmux.conf
-    ~/.emacs.d: emacs.d/
-    ~/.config/i3: i3/
     ~/.fonts: fonts/
     ~/.screenrc: screenrc
     ~/.gitconfig: gitconfig
