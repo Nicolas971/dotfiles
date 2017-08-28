@@ -22,3 +22,6 @@ alias g="git"
 # Clear swap & cache mem
 alias clearswap="echo 'swapoff -a && swapon -a' | sudo sh"
 alias clearcache="echo 'sync && echo 3 > /proc/sys/vm/drop_caches' | sudo sh"
+
+alias llr='ls -ltrh'
+
