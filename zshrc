@@ -95,3 +95,18 @@ bindkey -M emacs '^N' history-substring-search-down
 # bind k and j for VI mode
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
+
+
+export PATH="/home/nfrancil/git/repet_pipe/:~/git/repet_pipe/SMART/Java/Python:$PATH"
+export PERL5LIB="/home/nfrancil/local/JBROWSE/JBrowse-1.16.6/extlib/lib/perl5/:/home/nfrancil/git/perl/lib/GPI-Parser/lib/:$PERL5LIB"
+source ~/git/repet_pipe/config/setEnv.sh
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/nfrancil/.sdkman"
+[[ -s "/home/nfrancil/.sdkman/bin/sdkman-init.sh" ]] && source "/home/nfrancil/.sdkman/bin/sdkman-init.sh"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+

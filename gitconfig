@@ -151,3 +151,6 @@
 	# `git config --global push.default simple`. See http://git.io/mMah-w.
 	default = current
 
+[user]
+	email = nicolas.francillonne@inra.fr
+	name = Nicolas Francillonne
