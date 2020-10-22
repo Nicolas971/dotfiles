@@ -96,11 +96,49 @@ bindkey -M emacs '^N' history-substring-search-down
 bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
+###########GIT#################
+source /home/nfrancil/.dotfiles/zplug/repos/robbyrussell/oh-my-zsh/plugins/gitfast/git-completion.bash
+source /home/nfrancil/.dotfiles/zplug/repos/robbyrussell/oh-my-zsh/plugins/gitfast/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+
+
+#############ANT#################
+export ANT_HOME=$HOME/local/ant
+export PATH=$PATH:$ANT_HOME/bin
+
+###########MAVEN#################
+
+export M2_HOME=$HOME/local/maven
+export PATH=$M2_HOME/bin:$PATH
+export M2_REPO=$HOME/.m2/repository
+export MAVEN_OPTS=$JAVA_OPTS
+export M2_OPTS=$JAVA_OPTS
+
+###########JAVA##################
+export JAVA_HOME=$HOME/local/jdk1
+export JRE_HOME=$JAVA_HOME
+export JAVA_OPTS="$JAVA_OPTS -Dorg.apache.el.parser.SKIP_IDENTIFIER_CHECK=true -XX:MaxPermSize=2024m -XX:PermSize=256m -Xmx2024m -Xss256k"
+
+###########TOMCAT################
+CATALINA_HOME=$HOME/local/apache-tomcat-7.0.57
+CATALINA_BASE=$HOME/local/apache-tomcat-7.0.57
+CATALINA_TMPDIR=$CATALINA_HOME/tmp/tomcat
+export CATALINA_HOME CATALINA_BASE
+
+#########POSTGRESQL#############
+PG_HOME=/etc/postgresql/10/main/
+
+#. /etc/bash_completion.d/git
+
+alias vi=vim
 
 export PATH="/home/nfrancil/git/repet_pipe/:~/git/repet_pipe/SMART/Java/Python:$PATH"
 export PERL5LIB="/home/nfrancil/local/JBROWSE/JBrowse-1.16.6/extlib/lib/perl5/:/home/nfrancil/git/perl/lib/GPI-Parser/lib/:$PERL5LIB"
 source ~/git/repet_pipe/config/setEnv.sh
 
+set_java8
+
+export PATH=/home/nfrancil/local/htslib/bin:/home/nfrancil/local/solr-7.2.1/solr/bin/:$PATH
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nfrancil/.sdkman"
@@ -109,4 +147,3 @@ export SDKMAN_DIR="/home/nfrancil/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
