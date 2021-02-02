@@ -54,8 +54,9 @@ alias mountInter='sshfs centos@192.168.10.51:/home/centos/git/Intermine_Official
 alias VMPORTINTER='ssh -ND :7777 centos@192.168.10.51'
 alias umountInter='fusermount -u /home/nfrancil/git/Intermine_official'
 alias VMNEXTFLOW='ssh centos@192.168.10.48'
-alias VMMariene='ssh centos@138.102.146.76'
+alias VMMariene='ssh centos@138.102.146.53'
 
 alias VM-webfiles='ssh root@10.0.0.172'
 alias VMWheat='ssh root@10.0.0.91'
+alias VMWheatMine='ssh root@10.0.0.24'
 
