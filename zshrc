@@ -127,16 +127,20 @@ export CATALINA_HOME CATALINA_BASE
 
 #########POSTGRESQL#############
 PG_HOME=/etc/postgresql/10/main/
+PGPASSFILE=/home/nfrancil/.pgpass
 
 #. /etc/bash_completion.d/git
 
 alias vi=vim
 
 export PATH="/home/nfrancil/git/repet_pipe/:~/git/repet_pipe/SMART/Java/Python:$PATH"
-export PERL5LIB="/home/nfrancil/local/JBROWSE/JBrowse-1.16.6/extlib/lib/perl5/:/home/nfrancil/git/perl/lib/GPI-Parser/lib/:$PERL5LIB"
+export PERL5LIB="/home/nfrancil/local/JBROWSE/JBrowse-1.16.3/extlib/lib/perl5/:/home/nfrancil/git/perl/lib/GPI-Parser/lib/:$PERL5LIB"
 source ~/git/repet_pipe/config/setEnv.sh
+source ~/perl5/perlbrew/etc/bashrc
 
 set_java8
+
+alias setPerlJBrowse1_16_3="export PERL5LIB=/var/www/html/JBrowse-1.16.3/extlib/lib/perl5/:/home/nfrancil/git/perl/lib/GPI-Parser/lib/:$PERL5LIB"
 
 export PATH=/home/nfrancil/local/htslib/bin:/home/nfrancil/local/solr-7.2.1/solr/bin/:$PATH
 
@@ -147,3 +151,21 @@ export SDKMAN_DIR="/home/nfrancil/.sdkman"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export GOPATH=${HOME}/go
+export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/nfrancil/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/nfrancil/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/nfrancil/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/nfrancil/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
